@@ -9,7 +9,7 @@ Default version of docker-compose runs dnsproxy as quic server with upstream 1.1
 Create the docker image
 ```
 # cd dnsproxy/Docker
-# docker build -t dnsproxy/AdguardHome:latest $PWD
+# docker build -t dnsproxy/adguardhome:latest $PWD
 ```
 
 Functionalities supported by the docker image will be sub-set of the functionalities supported by dnsproxy current code
