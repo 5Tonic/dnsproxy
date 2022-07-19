@@ -2,7 +2,7 @@ version: '3'
 
 services:
   dnsproxy_https:
-    image: dnsproxy/AdguardHome:latest
+    image: dnsproxy/adguardhome:latest
     container_name: dnsproxy_https
     restart: always
     volumes:
@@ -23,7 +23,7 @@ services:
             - 443:443
             - 1114:1111/udp
   dnsproxy_quic:
-    image: dnsproxy/AdguardHome:latest
+    image: dnsproxy/adguardhome:latest
     container_name: dnsproxy_quic
     restart: always
     depends_on: 
@@ -45,7 +45,7 @@ services:
             - 784:784/udp
             - 1112:1111/udp
   dnsproxy_tls:
-    image: dnsproxy/AdguardHome:latest
+    image: dnsproxy/adguardhome:latest
     container_name: dnsproxy_tls
     restart: always
     depends_on:
@@ -55,9 +55,9 @@ services:
     environment:
       LISTEN: "0.0.0.0" 
       SRVPORT: "853"
-      DOMAIN: "jiteuhub.ddns.net"
+      DOMAIN: "example.org"
       EMAIL: "email@example.org"
-      UPSTREAM_ADDR: "1.1.1.1:53"
+      UPSTREAM_ADDR: "8.8.8.8:53"
       RATELIMIT: "100"
       EDNS: "ON"
       LOCALPORT: "1111" # Any local port #
